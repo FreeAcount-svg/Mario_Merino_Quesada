@@ -1,0 +1,471 @@
+:root {
+    --color-primario: #003882;
+    --color-secundario: #c5992e;
+    --texto-primario: #d1d1d1;
+    --texto-secundario: #1a1a1a;
+    --fondo-primario: #ffffff;
+    --fondo-secundario: #8b9ed9;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    height: 100vh;
+}
+
+/* ENCABEZADO */
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario);
+    padding: 30px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.navegacion h2 {
+    color: var(--color-secundario);
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--fondo-primario);
+    font-weight: bold;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secundario);
+}
+
+.hamburger {
+    display: none;
+
+}
+
+/* CUERPO DE LA PÁGINA */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    padding: 30px 40px;
+}
+
+section h2 {
+    font-size: 5vh;
+    color: var(--color-secundario);
+    margin-bottom: 30px;
+}
+
+.hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.hero-video {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+.hero-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* SECCION HERO */
+.hero h1 {
+    font-size: 6vw;
+    color: var(--color-secundario);
+}
+
+.hero p {
+    margin: 30px 0;
+    color: var(--fondo-primario);
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.boton-cv {
+    text-decoration: none;
+    color: var(--fondo-primario);
+    background-color: var(--color-secundario);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/*  CARROUSEL DE FUNCIONES */
+.carrousel-secciones {
+    background-color: var(--fondo-primario);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrousel-btn {
+    background-color: var(--color-secundario);
+    opacity: 75%;
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: var(--fondo-primario);
+    font-weight: bold;
+    position: absolute;
+    margin: 10px;
+    top: 50%;
+    transform: translateY(-50);
+}
+
+#prevBtn {
+    left: 0;
+}
+
+/*Botón a la izquierda*/
+#nextBtn {
+    right: 0;
+}
+
+/*Botón a la derecha*/
+
+/* SECCIONES QUE VAN PASANDO */
+.slide-cv {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+/* SECCIÓN SOBRE MI */
+
+.texto-mi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto-mi p {
+    padding: 20px;
+    width: auto;
+    font-size: 1.5rem;
+}
+
+.img-mi img {
+    border-radius: 15%;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    border: 5px solid var(--color-primario);
+}
+
+/* CARTAS DENTRO DE LAS SECCIONES */
+.card {
+    flex: 1;
+    background-color: var(--color-primario);
+    color: var(--fondo-primario);
+    max-width: auto;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.card p {
+    margin: 5px;
+}
+
+.card button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--color-secundario);
+    color: var(--fondo-primario);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exp {
+    text-align: left;
+}
+
+
+/* VENTANA EMERGENTE CON CERTIFICADO */
+.certificado-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--texto-secundario);
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Ventana emergente */
+.volver {
+    position: fixed;
+    bottom: 15%;
+    font-size: 1vw;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--color-secundario);
+    color: var(--fondo-primario);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.ver-certificado {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+.ver-certificado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contacto {
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primario);
+    padding: 50px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.contact {
+    flex: 1;
+    background-color: var(--texto-primario);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+}
+
+footer {
+    background-color: var(--texto-secundario);
+    color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* VISTA EN DIFERENTES DISPOSITIVOS */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 10%;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        background-color: var(--color-primario);
+        padding: 20px;
+        gap: 15px;
+        z-index: 10;
+        top: 8%;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 28px;
+        height: 3px;
+        background-color: var(--fondo-primario);
+        transition: all 0.2s ease;
+    }
+
+    /* Animación del icono de la hamburguesa (Se convierte en X) */
+    .hamburger.activo span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.activo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.activo span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    section {
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .ver {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 8vw;
+    }
+
+    .hero p {
+        font-size: 6vw;
+    }
+
+    .hero-video video {
+        position: fixed;
+        display: flex;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-mi p {
+        padding: 5px;
+        font-size: 14px;
+
+    }
+
+    .img-mi {
+        height: 200px;
+        width: auto;
+    }
+
+    .slide-cv {
+        display: flex;
+        margin-left: 10px;
+        padding: 60px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 10px;
+        margin: 5px;
+    }
+
+    .ver-certificado {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .volver {
+        bottom: 25%;
+        font-size: 6vw;
+        padding: 10px 20px;
+    }
+
+    .contacto {
+        padding-top: 100px;
+        background-color: var(--fondo-primario);
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        right: 0;
+    }
+}

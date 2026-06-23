@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_web.css">
+    <title>Mi Curriculum Vitae</title>
+</head>
+
+<body>
+    <!-- ENCABEZADO DE LA PÁGINA -->
+    <header class="navegacion">
+
+        <h2>Mario Merino Quesada</h2>
+
+        <div class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#portada">Inicio</a></li>
+                <li><a href="#carrousel-secciones">Información</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Botón del menú de hamburgesa -->
+        <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- TÍTULO Y BOTÓN PARA DESCARGAR PDF DEL CV -->
+        <section class="hero ver" id="portada">
+            <div class="hero-video">
+                <video src="https://www.pexels.com/es-es/download/video/11274341/" preload="auto" autoplay loop
+                    muted></video>
+            </div>
+            <h1>Desarrollo de Páginas Web</h1>
+            <p>Curriculum Web de Mario Merino Quesada</p>
+            <div class="cv-container">
+                <a href="assets/CV_Mario_Merino_Quesada.pdf" class="boton-cv" target="_blank">Ver CV en PDF</a>
+            </div>
+        </section>
+
+        <!-- CARROUSEL DE SECCIONES -->
+        <section id="carrousel-secciones" class="carrousel-secciones">
+
+            <!-- SECCIÓN SOBRE MI -->
+            <div class="carrousel-slide" id="slide-track">
+                <div id="slide-cv" class="slide-cv">
+                    <h2>Sobre Mi</h2>
+                    <div class="info container">
+                        <div class="img-mi">
+                            <img src="assets/foto-Mario (copia).png">
+                        </div>
+
+                        <div class="texto-mi">
+                            <p>Soy un trabajador organizado, adaptable, responsable y con
+                                experiencia en hostelería, administración y atención al cliente.
+                                Siempre doy lo mejor de mí en el trabajo.
+                                Soy rápido a la hora de buscar soluciones y bueno trabajando en
+                                equipo. Siempre dispuesto a aprender más y seguir formándome</p>
+
+                            <p>Recientemente, me he formado en confección y publicación de páginas web. Cuento con experiencia en maquetación de webs con HTML, CSS, y programación de funcionalidades con JAVASCRIPT. </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SECCIÓN DE EXPERIENCIA PROFESIONAL CON FUNCIONES -->
+                <div id="slide-cv" class="slide-cv">
+                    <h2>Experiencia</h2>
+
+                    <!-- Contenedor de las tarjetas de experiencia laboral -->
+                    <div id="exp-container" class="exp container">
+
+                        <div class="exp card">
+                            <h3>Atención al cliente</h3>
+                            <p class="nombre-empresa">Sortpremsa</p>
+                            <p class="funciones-empresa">Me encargaba de la recepción de las meraderías, la reposición
+                                de
+                                los
+                                productos y la venta cara al público.</p>
+                        </div>
+
+                        <div class="exp card">
+                            <h3>Auxiliar Administrativo</h3>
+                            <p class="nombre-empresa">Gráficas Ferpala</p>
+                            <p class="funciones-empresa">Gestionaba documentación tanto física como digital y servía de
+                                apoyo al
+                                departamento de contabilidad.</p>
+                        </div>
+
+                        <div class="exp card">
+                            <h3>Ayudante de cocina</h3>
+                            <p class="nombre-empresa">Restaurante Els Bessons y Catering Els fogons d'El Senell</p>
+                            <p class="funciones-empresa">En ambos puestos trabajaba en la preelaboración de los
+                                alimentos,en
+                                la
+                                zona fría y en la elaboración de los entrantes. También realizaba la limpieza de la
+                                cocina y
+                                fregaba los platos. </p>
+                        </div>
+
+                        <div class="exp card">
+                            <h3>Camarero</h3>
+                            <p class="nombre-empresa">McDonald's</p>
+                            <p class="funciones-empresa">Llevaba la comida y la bebida a las mesas, atendía a los
+                                clientes
+                                en la
+                                barra y limpiaba el comedor y los alrededores.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN DE ESTUDIOS -->
+                <div id="slide-cv" class="slide-cv">
+                    <h2>Formación</h2>
+
+                    <!-- Contenedor de las tarjetas de formación -->
+                    <div id="forma-container" class="forma container">
+
+                        <div class="forma card">
+                            <h3>Certificado Profesional en Confección y Publicación de Páginas Web</h3>
+                            <p class="nombre-empresa">Marzo 2026 - Septiembre 2026</p>
+                            <button data-img="">Ver certificado</button>
+                        </div>
+
+                        <div class="forma card">
+                            <h3>Certificado Profesional en Actividades de Venta</h3>
+                            <p class="forma-lugar">IMET Vilanova i la Geltrù</p>
+                            <p class="forma-tiempo">Enero 2025 - Septiembre 2025</p>
+                            <button data-image="assets/Certificado_Ventas.jpg">Ver certificado</button>
+                        </div>
+
+                        <div class="forma card">
+                            <h3>Certificado Profesional en Actividades de Gestión Administrativa</h3>
+                            <p class="forma-lugar">IMET Vilanova i la Geltrù</p>
+                            <p class="forma-tiempo">Febrero 2024 - Diciembre 2024</p>
+                            <button data-image="assets/Certificado-Administracion.jpg">Ver certificado</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VENTANA EMERGENTE CON IMÁGEN DE LOS CERTIFICADOS -->
+            <div id="certificado" class="certificado-container">
+                <button id="volver" class="volver">Volver</button>
+                <div class="ver-certificado">
+                    <img id="img-cert" src="">
+                </div>
+            </div>
+
+            <!-- Botones del carrousel de secciones -->
+            <button class="carrousel-btn" id="prevBtn">Anterior</button>
+            <button class="carrousel-btn" id="nextBtn">Siguiente</button>
+
+        </section>
+
+        <!-- SECCIÓN DE INFORMACIÓN DE CONTACTO -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+
+            <div class="contact-container">
+                <!-- TELÉFONO DE CONTACTO -->
+                <div class="contact telefono">
+                    <p>Teléfono de Contacto:</p>
+                    <a href="https://wa.me/34722519180" target="_blank" class="telefono">+34 722 51 91 80</a>
+                </div>
+
+                <!-- EMAIL DE CONTACTO -->
+                <div class="contact email">
+                    <p>Email de Contacto:</p>
+                    <a>mariocanigo@gmail.com</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; Mario Merino Quesada | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script_web.js"></script>
+</body>
+
+</html>
